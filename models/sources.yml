@@ -2,7 +2,8 @@ version: 2
 
 sources:
   - name: raw
-    schema: RAW_DB  # Replace with the schema where your raw tables are stored
+    database: RAW_DATABASE
+    schema: RAW_SOURCES  # Replace with the schema where your raw tables are stored
     tables:
       - name: country
       - name: city

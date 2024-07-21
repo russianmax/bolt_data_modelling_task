@@ -3,6 +3,7 @@ WITH source AS (
     FROM {{ source('raw', 'fleet') }}
 )
 
+
 SELECT
     id AS fleet_id,
     name AS fleet_name,
