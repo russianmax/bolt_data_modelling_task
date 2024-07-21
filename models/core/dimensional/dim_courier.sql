@@ -6,7 +6,7 @@ WITH source AS (
 SELECT
     courier_id,
     current_fleet_fk,
-    current_city_fk
+    current_city_fk,
     courier_name,
     courier_email,
     courier_phone_number,
