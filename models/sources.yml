@@ -11,7 +11,7 @@ sources:
       - name: fleet
       - name: customer
       - name: courier_rating
-      - name: order
+      - name: orders
       - name: courier
       - name: courier_order_activity
       - name: customer_rating

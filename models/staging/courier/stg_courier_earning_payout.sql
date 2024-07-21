@@ -5,11 +5,11 @@ WITH source AS (
 
 SELECT
     id AS payout_id,
+    courier_id AS courier_fk,
     payout_amount AS payout_amount,
     payout_date AS payout_date,
     next_payout_date AS next_payout_date,
     created_at AS created_at,
     updated_at AS updated_at,
-    status AS payout_status,
-    courier_id AS courier_fk
+    status AS payout_status
 FROM source

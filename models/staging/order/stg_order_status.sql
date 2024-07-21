@@ -5,7 +5,7 @@ WITH source AS (
 
 SELECT
     id AS status_id,
+    order_id AS order_fk,
     status AS order_status,
-    status_ts AS status_timestamp,
-    order_id AS order_fk
+    status_ts AS status_timestamp
 FROM source

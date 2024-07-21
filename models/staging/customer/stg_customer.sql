@@ -5,9 +5,9 @@ WITH source AS (
 
 SELECT
     id AS customer_id,
+    city_id AS city_fk,
     name AS customer_name,
     email AS customer_email,
-    phone_number AS customer_phone_number,
-    city_id AS city_fk
+    phone_number AS customer_phone_number
 FROM source
 

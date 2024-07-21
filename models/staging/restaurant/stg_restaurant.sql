@@ -5,9 +5,9 @@ WITH source AS (
 
 SELECT
     id AS restaurant_id,
+    city_id AS city_fk,
     name AS restaurant_name,
-    location AS restaurant_location,
+    address AS restaurant_address,
     geo_coordinates AS restaurant_geo_coordinates,
-    contact_info AS restaurant_contact_info,
-    city_id AS city_fk
+    contact_info AS restaurant_contact_info
 FROM source

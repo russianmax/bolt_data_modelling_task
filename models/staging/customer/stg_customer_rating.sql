@@ -5,9 +5,8 @@ WITH source AS (
 
 SELECT
     id AS customer_rating_id,
-    rating AS customer_rating,
-    comment AS customer_comment,
-    rating_ts AS customer_rating_timestamp,
     customer_id AS customer_fk,
-    courier_id AS courier_fk
+    courier_id AS courier_fk,
+    rating AS customer_rating,
+    comments AS customer_comment
 FROM source

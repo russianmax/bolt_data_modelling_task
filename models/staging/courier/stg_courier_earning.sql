@@ -5,7 +5,7 @@ WITH source AS (
 
 SELECT
     id AS earning_id,
+    courier_id AS courier_fk,
     balance_amount AS balance_amount,
-    last_payout_date AS last_payout_date,
-    courier_id AS courier_fk
+    last_payout_date AS last_payout_date
 FROM source
