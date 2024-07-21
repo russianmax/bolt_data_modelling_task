@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw
+    database: RAW_DATABASE
+    schema: RAW_SOURCES  # Replace with the schema where your raw tables are stored
+    tables:
+      - name: country
+      - name: city
+      - name: restaurant
+      - name: fleet
+      - name: customer
+      - name: courier_rating
+      - name: orders
+      - name: courier
+      - name: courier_order_activity
+      - name: customer_rating
+      - name: order_status
+      - name: courier_session
+      - name: courier_earning
+      - name: courier_earning_payout
