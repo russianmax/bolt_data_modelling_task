@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: raw
+    database: RAW_DATABASE
+    schema: RAW_SOURCES  
+    description: food delivery business dummy raw data 
+    tables:
+      - name: country
+        description: one record per country in which business operates in
+      - name: city
+        description: one record per city in which business operates in
+      - name: restaurant
+        description: one record per restaurant 
+      - name: fleet
+        description: available fleets
+      - name: customer
+        description: existing customers, one record per customer
+      - name: courier_rating
+        description: courier rating, rated by the customers
+      - name: orders
+        description: one record per order, json string for order items 
+      - name: courier
+        description: one record per courier, all of the current couriers
+      - name: courier_order_activity
+        description: tracks courier actvity, one record per activity - accepted, decline, deliver, pickup order
+      - name: customer_rating
+        description: customer rating, rated by the couriers after delivery
+      - name: order_status
+        description: tracks order status, one record per status change - placed, ready, picked up, delivered
+      - name: courier_session
+        description: tracks duration of courier session, active or inactive
+      - name: courier_earning
+        description: tracks courier balance and last payoute date
+      - name: courier_earning_payout
+        description: tracks courier payouts and status - processing, completed or failed
