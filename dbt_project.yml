@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'bolt_food_data_model'
+name: 'food_delivery_data_model'
 version: '1.0.0'
 config-version: 2
 
@@ -36,10 +36,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  staging:
-    +materialized: view
-  core:
-    dimensional:
-      materialized: table
-    fact:
+  food_delivery_data_model:
+    staging:
+      +materialized: view
+    core:
+      dimensional:
+        materialized: table
+      fact:
+        materialized: table
+    marts:
       materialized: table

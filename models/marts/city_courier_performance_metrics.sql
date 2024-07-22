@@ -1,4 +1,3 @@
-
 WITH city_metrics AS (
     SELECT
         ci.city_id,

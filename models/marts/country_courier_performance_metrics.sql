@@ -1,7 +1,3 @@
-{{ config(
-    materialized='table'
-) }}
-
 WITH country_metrics AS (
     SELECT
         co.country_id,
