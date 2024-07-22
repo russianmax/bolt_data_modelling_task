@@ -1,7 +1,9 @@
 WITH city_metrics AS (
     SELECT
+        ci.country_fk as country_id,
         ci.city_id,
         ci.city_name,
+        oe.order_date as date,
         COUNT(DISTINCT c.courier_id) AS total_couriers,
         COUNT(o.order_id) AS total_orders,
         SUM(o.order_earnings) AS total_earnings,
@@ -12,17 +14,19 @@ WITH city_metrics AS (
     JOIN {{ ref('dim_courier') }} c ON o.courier_fk = c.courier_id
     JOIN {{ ref('dim_city') }} ci ON c.current_city_fk = ci.city_id
     JOIN {{ ref('int_order_events') }} oe ON o.order_id = oe.order_id
-    GROUP BY ci.city_id, ci.city_name
+    GROUP BY ci.country_fk, ci.city_id, ci.city_name, oe.order_date
 )
 
 SELECT
     city_id,
     city_name,
+    date,
     total_couriers,
     total_orders,
     total_earnings,
     avg_delivery_time
 FROM city_metrics
+
 
 
 
