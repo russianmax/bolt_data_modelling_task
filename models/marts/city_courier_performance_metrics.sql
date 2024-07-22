@@ -1,6 +1,5 @@
 WITH city_metrics AS (
     SELECT
-        ci.country_fk as country_id,
         ci.city_id,
         ci.city_name,
         oe.order_date as date,
@@ -14,7 +13,7 @@ WITH city_metrics AS (
     JOIN {{ ref('dim_courier') }} c ON o.courier_fk = c.courier_id
     JOIN {{ ref('dim_city') }} ci ON c.current_city_fk = ci.city_id
     JOIN {{ ref('int_order_events') }} oe ON o.order_id = oe.order_id
-    GROUP BY ci.country_fk, ci.city_id, ci.city_name, oe.order_date
+    GROUP BY ci.city_id, ci.city_name, oe.order_date
 )
 
 SELECT
