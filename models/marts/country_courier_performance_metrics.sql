@@ -2,6 +2,7 @@ WITH country_metrics AS (
     SELECT
         co.country_id,
         co.country_name,
+        oe.order_date as date,
         COUNT(DISTINCT c.courier_id) AS total_couriers,
         COUNT(o.order_id) AS total_orders,
         SUM(o.order_earnings) AS total_earnings,
@@ -13,12 +14,13 @@ WITH country_metrics AS (
     JOIN {{ ref('dim_city') }} ci ON c.current_city_fk = ci.city_id
     JOIN {{ ref('dim_country') }} co ON ci.country_fk = co.country_id
     JOIN {{ ref('int_order_events') }} oe ON o.order_id = oe.order_id
-    GROUP BY co.country_id, co.country_name
+    GROUP BY co.country_id, co.country_name, oe.order_date
 )
 
 SELECT
     country_id,
     country_name,
+    date,
     total_couriers,
     total_orders,
     total_earnings,

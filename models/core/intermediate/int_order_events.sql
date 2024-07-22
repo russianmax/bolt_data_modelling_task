@@ -13,6 +13,7 @@ WITH order_events AS (
 
 SELECT 
     order_id,
+    DATE(order_placed_at) AS order_date, 
     order_placed_at,
     order_ready_at,
     order_picked_up_at,
