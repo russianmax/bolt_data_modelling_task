@@ -5,10 +5,6 @@ models:
     description: "this model calculates courier performance metrics by country"
     config:
       materialized: table
-      partition_by: 
-        field: city_id
-      cluster_by:
-
     columns:
       - name: country_id
         description: "the unique identifier for the country where the courier is currently operating"
