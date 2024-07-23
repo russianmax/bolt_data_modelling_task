@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_city
+    description: "The city model"
+    columns:
+      - name: city_id
+        description: The primary key of the for cities
+        tests:
+          - not_null
+          - unique
+      - name: country_fk
+        description: The foreign key to country table
+        tests:
+          - not_null
+
+      - name: city_name
+        description: The city name
+
+      - name: city_code
+        description: The state name

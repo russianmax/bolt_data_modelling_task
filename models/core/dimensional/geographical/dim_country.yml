@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_country
+    description: "The country model"
+    columns:
+      - name: country_id
+        description: The primary key of the for cities
+        tests:
+          - not_null
+          - unique
+
+      - name: country_name
+        description: The city name
+
+      - name: country_code
+        description: The state name

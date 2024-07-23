@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: dim_courier
+    description: "The courier model"
+    columns:
+      - name: courier_id
+        description: The primary key of the for cities
+        tests:
+          - not_null
+          - unique
+      
+      - name: current_city_fk
+        description: The foreign key to city table
+          - not_null
+
+
+      - name: current_fleet_fk
+        description: The foreign key to fleet talbe
+        tests:
+          - not_null
+
+      - name: courier_name
+        description: The courier name
+
+      - name: city_email
+        description: The courier email
+
+      - name: courier_phone_number
+        description: The city name
