@@ -3,14 +3,14 @@ WITH orders AS (
         order_id,
         courier_fk,
         order_earnings
-    FROM {{ ref('fct_orders') }} o
+    FROM {{ ref('fct_orders') }} 
 ),
 
 courier AS (
     SELECT
         courier_id,
         current_city_fk
-    FROM {{ ref('dim_courier') }} c
+    FROM {{ ref('dim_courier') }} 
 ),
 
 
@@ -18,7 +18,7 @@ country AS (
     SELECT
         country_id,
         country_name
-    FROM {{ ref('dim_country') }} ci
+    FROM {{ ref('dim_country') }} 
 ),
 
 
@@ -27,7 +27,7 @@ city AS (
         city_id,
         country_fk,
         city_name
-    FROM {{ ref('dim_city') }} ci
+    FROM {{ ref('dim_city') }} 
 ),
 
 
