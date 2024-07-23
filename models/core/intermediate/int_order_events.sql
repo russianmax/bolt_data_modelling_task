@@ -1,4 +1,3 @@
-
 WITH order_events AS (
     SELECT
         o.order_id,

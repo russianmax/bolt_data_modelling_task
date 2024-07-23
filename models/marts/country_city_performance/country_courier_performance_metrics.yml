@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: country_courier_performance_metrics
+    description: "this model calculates courier performance metrics by country"
+    config:
+      materialized: table
+      partition_by: 
+        field: city_id
+      cluster_by:
+
+    columns:
+      - name: country_id
+        description: "the unique identifier for the country where the courier is currently operating"
+      - name: country_name
+        description: "the name of the country where the courier is currently operating"
+      - name: date
+        description: "the date on which the performance metrics are recorded"
+      - name: total_couriers
+        description: "the total number of couriers active in the city on the specified date"
+      - name: total_orders
+        description: "the total number of orders placed in the city on the specified date"
+      - name: total_earnings
+        description: "the total earnings for all orders in the city on the specified date"
+      - name: avg_preparation_time
+        description: "the average time taken from order placement to order readiness, measured in minutes"
+      - name: avg_time_to_pickup
+        description: "the average time taken from order readiness to order pickup, measured in minutes"
+      - name: avg_delivery_time
+        description: "the average time taken from order placement to order delivery, measured in minutes"
