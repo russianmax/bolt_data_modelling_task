@@ -18,4 +18,7 @@ These stages include:
 * **Core** - dim and fact tables that represent the main analytical data structures 
 * **Marts** - provides tailored, highly aggregated data models optimized for specific business needs
 
+## Proposed Data Model
+![ER (10)](https://github.com/user-attachments/assets/d1cf9087-7773-4118-b63d-9cab9ceaa7bc)
+
 
